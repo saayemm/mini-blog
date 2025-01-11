@@ -1,17 +1,23 @@
 
+import { useState } from 'react'
 import './App.css'
 import Blogs from './components/blogs/Blogs'
 import Bookmarks from './components/bookmarks/Bookmarks'
 import Header from './components/header/Header'
 
 function App() {
-  
+  const [bookmarks, setBookmarks] = useState([])
+
+  const hundleBookmark = blog => {
+    console.log("bookmark added");
+    
+  }
 
   return (
     <div className='mx-auto'>
       <Header></Header>
       <div className='md:flex p-4 gap-8'>
-      <Blogs></Blogs>
+      <Blogs hundleBookmark={hundleBookmark}></Blogs>
       <Bookmarks></Bookmarks>
       </div>
     </div>

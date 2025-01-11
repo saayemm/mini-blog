@@ -1,6 +1,6 @@
 import { FaRegBookmark } from "react-icons/fa6";
 
-export default function Blog({blog}) {
+export default function Blog({blog, hundleBookmark}) {
   const  {title, cover_image, author_image, author_name, reading_time, posted_date, hashtags} = blog
   return (
     <div className="mt-8">
@@ -18,7 +18,7 @@ export default function Blog({blog}) {
         </div>
         <div className="flex gap-2">
           <div>{reading_time} min read</div>
-          <button className="text-green-500"><FaRegBookmark /></button>
+          <button onClick={hundleBookmark} className="text-green-500"><FaRegBookmark /></button>
         </div>
       </div>
       <h2 className="text-2xl font-bold">Title: {title}</h2>
