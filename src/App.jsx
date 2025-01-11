@@ -8,13 +8,13 @@ function App() {
   
 
   return (
-    <>
+    <div className='mx-auto'>
       <Header></Header>
-      <div className='md:flex p-4 gap-6'>
+      <div className='md:flex p-4 gap-8'>
       <Blogs></Blogs>
       <Bookmarks></Bookmarks>
       </div>
-    </>
+    </div>
   )
 }
 
