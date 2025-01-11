@@ -18,7 +18,7 @@ function App() {
       <Header></Header>
       <div className='md:flex p-4 gap-8'>
       <Blogs hundleBookmark={hundleBookmark}></Blogs>
-      <Bookmarks></Bookmarks>
+      <Bookmarks bookmarks={bookmarks}></Bookmarks>
       </div>
     </div>
   )
