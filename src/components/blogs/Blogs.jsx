@@ -2,7 +2,7 @@ import { useEffect } from "react"
 import { useState } from "react"
 import Blog from "../blog/Blog"
 
-export default function Blogs({hundleBookmark}) {
+export default function Blogs({hundleBookmark, hundleMarkAsRead}) {
     const [blogs, setBlogs] = useState([])
 
     useEffect(()=> {
@@ -17,6 +17,7 @@ export default function Blogs({hundleBookmark}) {
           blogs.map(blog=><Blog 
               key={blog.id} 
               blog={blog}
+              hundleMarkAsRead={hundleMarkAsRead}
               hundleBookmark={hundleBookmark}></Blog>)
         }
     </div>

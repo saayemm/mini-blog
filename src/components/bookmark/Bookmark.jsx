@@ -1,6 +1,4 @@
 
-
-
 const Bookmark = ({bookmark}) => {
     const {title} = bookmark
   return (

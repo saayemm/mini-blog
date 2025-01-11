@@ -1,6 +1,6 @@
 import { FaRegBookmark } from "react-icons/fa6";
 
-export default function Blog({blog, hundleBookmark}) {
+export default function Blog({blog, hundleBookmark, hundleMarkAsRead}) {
   const  {title, cover_image, author_image, author_name, reading_time, posted_date, hashtags} = blog
   return (
     <div className="mt-8">
@@ -24,7 +24,9 @@ export default function Blog({blog, hundleBookmark}) {
       <h2 className="text-2xl font-bold">Title: {title}</h2>
       {
         hashtags.map((hastag, index)=> <span key={index} className="ml-2 text-red-500"><a href="">{hastag}</a></span>)
-      }
+      } 
+      <br />
+      <button className="text-green-600" onClick={()=>hundleMarkAsRead(reading_time)}>Mark as read</button>
     </div>
   )
 }
