@@ -9,8 +9,8 @@ function App() {
   const [bookmarks, setBookmarks] = useState([])
 
   const hundleBookmark = blog => {
-    console.log("bookmark added");
-    
+    const newBookmarks = [...bookmarks, blog]
+    setBookmarks(newBookmarks)
   }
 
   return (
