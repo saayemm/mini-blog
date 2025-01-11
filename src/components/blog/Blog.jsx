@@ -18,7 +18,7 @@ export default function Blog({blog, hundleBookmark}) {
         </div>
         <div className="flex gap-2">
           <div>{reading_time} min read</div>
-          <button onClick={hundleBookmark} className="text-green-500"><FaRegBookmark /></button>
+          <button onClick={()=>hundleBookmark(blog)} className="text-green-500"><FaRegBookmark /></button>
         </div>
       </div>
       <h2 className="text-2xl font-bold">Title: {title}</h2>
